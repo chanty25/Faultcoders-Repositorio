@@ -80,8 +80,5 @@ int main() {
     
     // Reservar espacio
     vp.reserve(10);                       // Reserva espacio para 10 elementos
-    
-    
-    
     return 0;
 }
