@@ -51,7 +51,17 @@ int minMaxLoad(vector<int>& tasks, int m) {
     
     return *max_element(loads.begin(), loads.end());
 }
-
+//Rotar una matriz 90 grados
+vector<vector<int>> rotar(vector<vector<int>>& a) {
+    int n = sz(a), m = sz(a[0]);
+    vector<vector<int>> v(m, vector<int>(n));
+    forn(i, n) {
+        forn(j, m) {
+            v[j][n - 1 - i] = a[i][j];
+        }
+    }
+    return v;
+}
 
 
 
