@@ -63,10 +63,3 @@ vector<vector<int>> rotar(vector<vector<int>>& a) {
     return v;
 }
 
-
-
-int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);
-    return 0;
-}
