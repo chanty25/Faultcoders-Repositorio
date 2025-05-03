@@ -1,26 +1,4 @@
-#include <bits/stdc++.h>
-using namespace std;
-#define forn(i, n) for (int i = 0; i < n; ++i)
-#define ff first
-#define ss second
-#define endl '\n'
-#define all(s) s.begin(), s.end()
-#define sz(s) int(s.size())
-#define pb push_back
-#define pii pair<int, int>
-#define vi vector<int>
-typedef long long ll;
-typedef vector<int> vi;
-
 int main() {
-  
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);
-    
-    #ifdef LOCAL
-    freopen("input.txt", "r", stdin);
-    #endif
-    
     stack <tipoDato> st;
     st.push(x);  // Inserta x al tope
     st.pop();  // Elimina el tope (NO lo retorna)
@@ -45,11 +23,9 @@ int main() {
     dq.back();  // Accede al último
     dq.empty();  // true si está vacía
     dq.size();  // número de elementos
-    
     dq.erase(dq.begin() + pos); //elimina al elemento en las posicion pos
     dq.insert(dq.begin() + pos, num); //inserta un numero (num) en una posicion (pos)
     dq.insert(dq.begin() + pos, can, num);  // inserta una cantidad (can) de numeros (num) en la posicion (po)
-    
     
     vector <pii> vp;
     // Acceso
@@ -72,12 +48,15 @@ int main() {
     vp.size();                            // Tamaño del vector
     vp.empty();                           // Verifica si está vacío
     vp.clear();                           // Vacía el vector
-    
+
+    // Crear una priority queue (maximo elemento por defecto)
+    priority_queue<int> pq;
+    // priority queue (minimo elemento por defecto)
+    priority_queue<int, vector<int>, greater<int>> min_pq;
     // Iteradores
     for (auto it = vp.begin(); it != vp.end(); ++it) {
         cout << it->first << ", " << it->second << endl;
     }
-    
     // Reservar espacio
     vp.reserve(10);                       // Reserva espacio para 10 elementos
     return 0;
